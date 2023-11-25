@@ -1,0 +1,38 @@
+{
+  "name": "hexo-generator-i18n-post",
+  "version": "1.0.0",
+  "description": "A plugin to generate i18n posts based on the identifier in front matter",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jecosine/hexo-generator-i18n-post.git"
+  },
+  "keywords": [
+    "i18n",
+    "hexo",
+    "generator"
+  ],
+  "author": {
+    "name": "Jecosine",
+    "email": "jecosine@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jecosine/hexo-generator-i18n-post/issues"
+  },
+  "homepage": "https://github.com/Jecosine/hexo-generator-i18n-post#readme",
+  "dependencies": {
+    "hexo-front-matter": "^4.2.1",
+    "hexo-fs": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}
