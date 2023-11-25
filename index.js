@@ -7,7 +7,7 @@ const helper = require('./lib/helpers');
 
 function loadConfig() {
     if (!hexo.config.hasOwnProperty('i18n_post_generator')) {
-        hexo.log.info('i18n_post config not found, exiting');
+        hexo.log.info('[i18n post generator]: i18n_post config not found, exiting');
         return null;
     }
     var config = hexo.config.i18n_post_generator;
@@ -22,16 +22,16 @@ function postGenerator(locals) {
 
     if (Array.isArray(defaultLang)) {
         defaultLang = defaultLang[0];
-        hexo.log.debug(`default language: ${defaultLang}`);
+        hexo.log.debug(`[i18n post generator]: default language: ${defaultLang}`);
     } else if (typeof defaultLang === 'undefined') {
-        hexo.log.warn('default language not defiend, using `en` as default language');
+        hexo.log.warn('[i18n post generator]: default language not defiend, using `en` as default language');
     }
 
     let postDict = helper.getPostDict(allPosts, defaultLang, identifier);
     // print postDict
-    for (let slug in postDict) {
-        let message = `slug: ${slug}`;
-        for (let lang in postDict[slug]) {
+    for (let id in postDict) {
+        let message = `[i18n post generator]: id: ${id}`;
+        for (let lang in postDict[id]) {
             message += `, ${lang}`;
         }
         hexo.log.info(message);
